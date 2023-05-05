@@ -13,11 +13,56 @@
 <body>
     <h1>Weekend Salary Calculator Homework</h1>
 
-    <div>
-        <input id="fname" type="text" name="fname" placeholder="Employee First Name">
-        <input id="lname" type="text" name="lname" placeholder="Last Name">
-        <input id="idNum" type="text" name="idNum" placeholder="ID Number">
+    <form>
+        <input 
+        id="input-f-name" 
+        class="inputTextBox" 
+        type="text" 
+        placeholder="Employee First Name"
+        >
+        <input 
+        id="input-l-name" 
+        class="inputTextBox" 
+        type="text" 
+        placeholder="Last Name"
+        >
+        <input 
+        id="input-id-Num" 
+        class="inputTextBox" 
+        type="text" 
+        placeholder="ID Number"
+        >
+        <input 
+        id="input-job-Title" 
+        class="inputTextBox" 
+        type="text" 
+        placeholder="Job Title"
+        >
+        <input 
+        id="input-annSalary" 
+        class="inputTextBox" 
+        type="text" 
+        placeholder="Annual Salary"
+        >
+        <button class="delete-button">Delete</button>
+    </form>
+    <button id="submitButton">Submit</button>
 
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Employee First Name</th>
+                <th>Last Name</th>
+                <th>ID Number</th>
+                <th>Job Title</th>
+                <th>Annual Salary</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
