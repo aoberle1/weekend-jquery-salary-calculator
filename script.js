@@ -49,7 +49,9 @@ function handleSubmit(event) {
     `)
 
     $('#monthly-salary-span').empty();
-    monthlySalaryContainer++
+    // incrementing to ensure element and variable are connected
+    // monthlySalaryContainer++
+    monthlySalaryContainer += monthlySalary
 
     // targets element with id monthly-salary-span and appends it to the value of the
     // monthlySalaryContainer variable
