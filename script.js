@@ -76,9 +76,13 @@ function handleSubmit(event) {
     $('#input-job-Title').val('');
     $('#input-annSalary').val('');
 
+    // if statement that executes if the monthlySalaryContainer value exceeds 20,000
     if (monthlySalaryContainer > 20000){
+        // targets element with ID red-wedding and gives it the class super-secret
         $('#red-wedding').addClass('super-secret')
     }
+
+    Math.round(monthlySalaryContainer);
 }
 
 // function to remove 
