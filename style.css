@@ -27,3 +27,8 @@ h1{
 .tfooter-element{
     border: 1px solid black
 }
+
+.flex-box{
+    display: flex;
+    justify-content: center;    
+}
