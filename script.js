@@ -6,6 +6,8 @@ function onReady() {
     // target element with id submitButton and on click, run function handleSubmit
     $('#submitButton').on( 'click', handleSubmit);
 
+    // target element with id table-body, when the child element .delete-btn within it is clicked
+    // run the function removeHuman
     $('#table-body').on( 'click', '.delete-btn', removeHuman);
 
 }
@@ -27,7 +29,8 @@ function handleSubmit(event) {
     event.preventDefault();
 
     // when the function runs, targeting the element with id table-body, and append it to include
-    // the following table row and table data cells
+    // the following table row and table data cells, with data received from HTML form inputs
+    // also creates a delete button at the end of the row
     $('#table-body').append(`
         <tr>
             <td>
@@ -51,9 +54,15 @@ function handleSubmit(event) {
         </tr>
     `)
 
+    // each time the submit button is clicked, empties out the element with the ID
+    // monthly-salary-span
     $('#monthly-salary-span').empty();
-    // incrementing to ensure element and variable are connected
+
+    // incrementing test to ensure element and variable are connected
     // monthlySalaryContainer++
+
+    // each time the submit button is clicked, adds the value of the monthlySalary variable to it
+    // and appends the global variable to the new value
     monthlySalaryContainer += monthlySalary
 
     // targets element with id monthly-salary-span and appends it to the value of the
@@ -67,11 +76,17 @@ function handleSubmit(event) {
     $('#input-job-Title').val('');
     $('#input-annSalary').val('');
 
-
+    if (monthlySalaryContainer > 20000){
+        $('#red-wedding').addClass('super-secret')
+    }
 }
 
+// function to remove 
 function removeHuman() {
+    // removes the "grandparent" of the element clicked
     $(this).parent().parent().remove();
 }
 
+// creating variable with value set to zero - connected to #monthly-salary-span element in HTML
+// connected in 
 let monthlySalaryContainer = 0;
