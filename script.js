@@ -6,6 +6,8 @@ function onReady() {
     // target element with id submitButton and on click, run function handleSubmit
     $('#submitButton').on( 'click', handleSubmit);
 
+    $('#table-body').on( 'click', '.delete-btn', removeHuman);
+
 }
 
 // function that runs on event (click of submit button)
@@ -21,6 +23,7 @@ function handleSubmit(event) {
     // creating variable to store monthly salary value
     let monthlySalary = inputAnnualSalary / 12;
 
+    // prevents default unwanted behavior to run upon function being called
     event.preventDefault();
 
     // when the function runs, targeting the element with id table-body, and append it to include
@@ -65,6 +68,10 @@ function handleSubmit(event) {
     $('#input-annSalary').val('');
 
 
+}
+
+function removeHuman() {
+    $(this).parent().parent().remove();
 }
 
 let monthlySalaryContainer = 0;
