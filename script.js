@@ -82,7 +82,6 @@ function handleSubmit(event) {
         $('#red-wedding').addClass('super-secret')
     }
 
-    Math.round(monthlySalaryContainer);
 }
 
 // function to remove 

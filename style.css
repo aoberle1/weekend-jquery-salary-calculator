@@ -28,7 +28,11 @@ h1{
     border: 1px solid black
 }
 
-.flex-box{
+#submit-flex{
+    display: flex;   
+}
+
+#target-table{
     display: flex;
-    justify-content: center;    
+    text-align: center;
 }
