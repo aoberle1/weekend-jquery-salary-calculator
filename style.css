@@ -1,3 +1,6 @@
+/* adding comments to css I found to explain what it does */
+
+/* border collapse lets element borders meet (or "collapse") each other */
 table, th, tr, td{
     border: 1px solid black;
     border-collapse: collapse;
@@ -8,16 +11,19 @@ thead{
     background-color: lightgray;
 }
 
-body{
-    margin: 0px;
+/*  sets background color of odd children of the table body */
+tbody tr:nth-child(odd){ 
+    background: #fcfcfc;
+  }
+
+/*  sets background color of odd children of the table body */
+tbody tr:nth-child(even){
+    background: #dcdcdc;
 }
 
 h1{
-    margin: 0px;
-    text-align: center;
-    background-color: gray;
-    color: white;
-    height: 75px;
+    /* em resizes text to be 2.5 times the font size in pixels - ex: font size 16 = 40 pixels (16 * 2.5) */
+    font-size: 2.5em;
 }
 
 .super-secret{
@@ -28,6 +34,7 @@ h1{
     border: 1px solid black
 }
 
+/* display: flex enables flexbox functionality */
 #submit-flex{
     display: flex;   
 }
@@ -35,4 +42,24 @@ h1{
 #target-table{
     display: flex;
     text-align: center;
+}
+
+header{
+    height: 8em;
+    background-color: grey;
+    text-align: center;
+}
+
+header, footer {
+    height: 100%;
+    display: flex;
+    /* justify-content sets along main axis of container */
+    justify-content: center;
+    /* align-items sets item based on cross axis */
+    align-items: center;
+  }
+
+.inputTextBox{
+    display: flex;
+    justify-content: stretch;
 }
