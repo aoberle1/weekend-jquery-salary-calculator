@@ -24,6 +24,7 @@ tbody tr:nth-child(even){
 h1{
     /* em resizes text to be 2.5 times the font size in pixels - ex: font size 16 = 40 pixels (16 * 2.5) */
     font-size: 2.5em;
+    color: white;
 }
 
 .super-secret{
@@ -57,9 +58,10 @@ header, footer {
     justify-content: center;
     /* align-items sets item based on cross axis */
     align-items: center;
-  }
+}
 
-.inputTextBox{
-    display: flex;
-    justify-content: stretch;
+/* tells table element to automatically adjust to take up 100% of the width of the browser */
+table {
+    width: 100%;
+    text-align: left;
 }
